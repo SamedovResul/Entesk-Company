@@ -1,0 +1,121 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.offer-nav-section{
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  padding: 10px 0px;
+  z-index: 4;
+  background-color: black;
+}
+
+/* offer section  */
+
+
+.offers-section{
+  margin: 50px auto;
+}
+
+.footer-box ul li{
+  cursor: pointer;
+}
+
+.about-title{
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.about-title h4{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.pricing-box{
+  background-color: black;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.pricing-box> div:nth-child(1){
+  padding: 10px 20px 0px 20px;
+  border: 2px solid gray;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-box div:nth-child(1) p{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.pricing-box div:nth-child(1) p:nth-child(1){
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+.pricing-box div:nth-child(1) p:nth-child(2){
+  font-size: 15px;
+  color: gray;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.pricing-box div:nth-child(1) p:nth-child(2) a{
+  color: white;
+  text-decoration: unset;
+}
+
+.pricing-box> div:nth-child(2){
+  background-color: black;
+  border: 2px solid gray;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.pricing-box div:nth-child(2) ul{
+  padding-left: 10px;
+}
+
+.pricing-box div:nth-child(2) ul li{
+  list-style: none;
+  margin: 10px;
+  font-weight: 500;
+  color: white;
+}
+
+.pricing-box div:nth-child(2) ul li  span{
+  color: white;
+}
+
+.contact-Us{
+  padding: 10px 20px;
+  width: 90%;
+  border: 1px solid white;
+  margin: 10px auto 20px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+}
+
+.contact-Us a{
+  color: white;
+  text-decoration: unset;
+}
+
+.contact-Us a:hover{
+  color: white;
+}
+
+/* footer section */
+
+.offer-footer-section{
+  margin-top: 100px;
+}
+

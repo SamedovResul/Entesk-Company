@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import Navbar from './component/Navbar';
+import HeaderSection from "./component/headerSection"
+import functions from './component/functions';
+import About from './component/about/About';
+import FooterSection from './component/FooterSection';
+import Offer from './component/offer/Offer';
+import News from "./component/news/News"
+const App = (props) => {
+  const {
+    style,
+    scrollPosition,
+    myRef,
+    news, 
+    setNews,
+    BurgerMenustyles,
+    setBurger
+  } = functions() 
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Navbar 
+        style={style} 
+        scrollPosition={scrollPosition} 
+        BurgerMenustyles={BurgerMenustyles}
+        setBurger={setBurger}
+        />
+      <Routes>
+        <Route path='/' element={ <HeaderSection myRef={myRef} setNews={setNews} /> }/>
+        <Route path='about' element={ <About /> } />
+        <Route path='offer' element={ <Offer /> } />
+        <Route path='news/:id' element={ <News news={news} />} />
+      </Routes>
+      <FooterSection />
+    </Router>
+  )
 }
 
-export default App;
+export default App
