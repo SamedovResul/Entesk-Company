@@ -5,12 +5,21 @@ import {  animated, } from 'react-spring';
 
 const Navbar = (props) => {
   const {scrollPosition,BurgerMenustyles,setBurger} = props
-  const {setContact} = functions()
+  const {setContact} = functions();
+
+  const burgerHandler = (param) =>{
+    if(param == "/"){
+      setContact(true)
+      setBurger(false)
+    }else if(param == "/about"){
+      setBurger(false)
+    }
+  }
 
   return (
     <section 
       style={ window.location.pathname == '/' ?  
-      scrollPosition > 600? {backgroundColor: "black"} : 
+      scrollPosition > 400? {backgroundColor: "black"} : 
       {backgroundColor: "unset"} : {backgroundColor: "black"} }
       className={window.location.pathname == '/' ? "nav-section" : "offer-nav-section" }   >
     <div className="container">
@@ -26,7 +35,7 @@ const Navbar = (props) => {
               </div>
               <div className="nav-box">
                   <ul>
-                    <Link to='/' className="contact" onClick={() => setContact(true)}>
+                    <Link to='/' className="contact" onClick={() =>setContact(true)}>
                       Əlaqə
                     </Link>
                     <Link to="/about" >
@@ -42,12 +51,12 @@ const Navbar = (props) => {
                   </button>
                   <ul>
                     <li>
-                      <Link to='/' className="contact" onClick={() => setContact(true)}>
+                      <Link to='/' className="contact" onClick={() => burgerHandler('/')}>
                         Əlaqə
                       </Link>
                     </li>
                     <li>
-                      <Link to="/about" >
+                      <Link to="/about" onClick={() => burgerHandler('/about')} >
                         Haqqımızda
                       </Link>
                     </li>

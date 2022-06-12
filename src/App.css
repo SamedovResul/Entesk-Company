@@ -8,6 +8,14 @@
   z-index: 4;
 }
 
+.offer-nav-section{
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  padding: 10px 0px;
+  z-index: 4;
+  background-color: black;
+}
 
 .main-nav-div{
   display: flex;
@@ -92,7 +100,7 @@
 @media(max-width:768px){
   .responsive{
     display: block;
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 50%;
     top: 0px;

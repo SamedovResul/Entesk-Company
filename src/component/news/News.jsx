@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Data from "../../data"
 import { useParams } from 'react-router-dom'
 import './style.css'
@@ -8,10 +8,11 @@ const News = ({news}) => {
   const News = Data.slide
   const {content,img,text } = news.data
 
-  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
    const slideInfo =  News.find((data) => data.id === Number(id)  )
 
-  console.log(slideInfo)
   return (
     <section id="news-section" >
       <div className="container">

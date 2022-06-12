@@ -67,7 +67,6 @@ const functions = () => {
   }, [window.scrollY])
   
   // burger menu
-
   const BurgerMenustyles = useSpring({
     from: { 
       right:"-50%",

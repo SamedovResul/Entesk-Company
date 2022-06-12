@@ -1,7 +1,14 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './offer.css'
 
+
 const Offer = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
+
   return (
     <section className="offers-section">
     <div className="container">

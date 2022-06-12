@@ -14,6 +14,10 @@ const headerSection = (props) => {
     setClass
   } = functions()
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
   <>
     <section className="head-section" id="head-section">

@@ -1,8 +1,14 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import "./about.css";
-
+import functions from '../functions'
 
 const About = () => {
+  const {setBurger} = functions()
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
+
   return (
   <section className="about-section">
     <div className="container">
