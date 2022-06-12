@@ -7,16 +7,29 @@ import { Link } from 'react-router-dom';
 
 import functions from './functions';
 const headerSection = (props) => {
-  const {setNews} = props 
+  const {setNews,contact,setContact,} = props 
   const {
     myRef,
     Class,
-    setClass
+    setClass,
+    setBurger,
+    burger,
   } = functions()
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [])
+    if(contact){
+      window.scrollTo(0, 2570 )
+    }else {
+      window.scrollTo(0, 0 )
+    }
+    console.log(contact)
+  }, [contact])
+
+  const burgerHandler = () =>{
+    setBurger(false)
+    setContact(false)
+  }
+  
 
   return (
   <>
@@ -28,8 +41,8 @@ const headerSection = (props) => {
             <div className="col-md-12">
               <div className="icon-div">
                 <h1>İnnovasiya ilə biznesinizi hər zaman <br /> bir addım öndə saxlayın.</h1>
-                <button> 
-                  <Link to="offer">
+                <button > 
+                  <Link to="/offer" onClick={ ()=> burgerHandler()}>
                     Təkliflərimiz
                   </Link>
                 </button>

@@ -1,11 +1,10 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import functions from './functions'
 import {  animated, } from 'react-spring';
 
 const Navbar = (props) => {
-  const {scrollPosition,BurgerMenustyles,setBurger} = props
-  const {setContact} = functions();
+  const {scrollPosition,BurgerMenustyles,setBurger,setContact } = props
 
   const burgerHandler = (param) =>{
     if(param == "/"){
@@ -13,8 +12,11 @@ const Navbar = (props) => {
       setBurger(false)
     }else if(param == "/about"){
       setBurger(false)
+      setContact(false)
     }
   }
+
+  
 
   return (
     <section 
@@ -35,10 +37,10 @@ const Navbar = (props) => {
               </div>
               <div className="nav-box">
                   <ul>
-                    <Link to='/' className="contact" onClick={() =>setContact(true)}>
+                    <Link to='/' className="contact" onClick={() => setContact(true)}>
                       Əlaqə
                     </Link>
-                    <Link to="/about" >
+                    <Link to="/about" onClick={() => setContact(false)} >
                       Haqqımızda
                     </Link>
                   </ul>

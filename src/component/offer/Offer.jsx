@@ -1,11 +1,11 @@
 import React,{useEffect} from 'react'
 import './offer.css'
-
-
-const Offer = () => {
+import functions from '../functions'
+import { Link } from 'react-router-dom';
+const Offer = ({setContact}) => {
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 10)
   }, [])
   
 
@@ -42,9 +42,9 @@ const Offer = () => {
                   <li> <span>&#10003;</span> Sürücünün telefonu ilə danışmasını detekt etmək</li>
                   <li> <span>&#10003;</span> Sürücünün yolda diqqətli olmasını detekt etmək</li>
                 </ul>
-                <a href="../index.html">
-                  <button className="contact contact-Us" >Əlaqə</button>
-                </a>
+                <Link to='/'>
+                  <button className="contact contact-Us" onClick={() =>setContact(true)} >Əlaqə</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -71,9 +71,9 @@ const Offer = () => {
                   <li> <span>&#10003;</span> Oyunlaşdırılmış cəlbedici dərslərlə əylənin</li>
                   <li> <span>&#10003;</span> Öz istəyinizə uyğun avatarınızı yaradın</li>
                 </ul>
-                <a href="../index.html">
-                  <button className="contact contact-Us" >Əlaqə</button>
-                </a>
+                <Link to='/'>
+                  <button className="contact contact-Us" onClick={() =>setContact(true)} >Əlaqə</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -100,9 +100,9 @@ const Offer = () => {
                   <li> <span>&#10003;</span> Adaptiv Dizayn</li>
                   <li> <span>&#10003;</span> Mobil proqram</li>
                 </ul>
-                <a href="../index.html">
-                  <button className="contact contact-Us" >Əlaqə</button>
-                </a>
+                <Link to='/'>
+                  <button className="contact contact-Us" onClick={() =>setContact(true)} >Əlaqə</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -129,9 +129,9 @@ const Offer = () => {
                   <li> <span>&#10003;</span> Fizika, Kimya və tətbiqi elmlər</li>
                   <li> <span>&#10003;</span> STEAM yönümlü yanaşma</li>
                 </ul>
-                <a href="../index.html">
-                  <button className="contact contact-Us" >Əlaqə</button>
-                </a>
+                <Link to='/'>
+                  <button className="contact contact-Us" onClick={() =>setContact(true)} >Əlaqə</button>
+                </Link>
               </div>
             </div>
           </div>

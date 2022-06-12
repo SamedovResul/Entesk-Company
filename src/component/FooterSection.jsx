@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom';
 
-const FooterSction = () => {
+const FooterSction = ({setContact}) => {
   
 
   return (
@@ -19,17 +19,17 @@ const FooterSction = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="offer">
+                  <Link to="offer" onClick={()=> setContact(false)}>
                     Məhsullarımız
                   </Link>
                 </li>
                 <li>
-                  <Link to="about">
+                  <Link to="about" onClick={()=> setContact(false)}>
                     Haqqımızda
                   </Link>
                 </li>
                 <li>
-                  <Link to='/' className="contact">
+                  <Link to='/' className="contact" onClick={()=> setContact(true)}> 
                     Əlaqə
                   </Link>
                 </li>

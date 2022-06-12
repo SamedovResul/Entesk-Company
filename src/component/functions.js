@@ -4,7 +4,7 @@ import { useSpring, animated, } from 'react-spring';
 import Data from '../data'
 const functions = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [contact, setContact] = useState(false)
+  
   const [Class, setClass] = useState({
     className:'',
     index:0
@@ -22,12 +22,11 @@ const functions = () => {
   const handleScroll = () =>  setScrollPosition(window.pageYOffset)
   window.addEventListener('scroll', handleScroll)
 
-  useEffect(() => {
-    if(contact){
-      window.scrollTo(0, 2570 ) 
-      setContact(false)
-    }
-  }, [contact])
+  // useEffect(() => {
+
+  //   contact ? window.scrollTo(0, 2570 ) :window.scrollTo(0, 0 );
+  //   console.log(contact)
+  // }, [contact])
   
   // area fade in out 
   
@@ -83,13 +82,13 @@ const functions = () => {
   return { 
     scrollPosition,
     myRef,
-    setContact,
     Class,
     setClass,
     news, 
     setNews,
     BurgerMenustyles,
-    setBurger
+    setBurger,
+    burger
    }
 }
 
